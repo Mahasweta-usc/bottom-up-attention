@@ -111,6 +111,14 @@ Any NVIDIA GPU with 12GB or larger memory is OK for training Faster R-CNN ResNet
 
 4. Build Caffe and pycaffe
     ```Shell
+    
+    #Please make sure the following dependencies are installed
+    #Make sure to modify library and python library paths in Makefile and Makefile.config as may be required
+    sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+    sudo apt-get install — no-install-recommends libboost-all-dev
+    sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+    sudo pip3 install protobuf
+    
     cd $REPO_ROOT/caffe
     # Now follow the Caffe installation instructions here:
     #   http://caffe.berkeleyvision.org/installation.html
@@ -118,12 +126,6 @@ Any NVIDIA GPU with 12GB or larger memory is OK for training Faster R-CNN ResNet
     # If you're experienced with Caffe and have all of the requirements installed
     # and your Makefile.config in place, then simply do:
     make -j8 && make pycaffe
-    #Please make sure the following dependencies are installed
-    #Make sure to modify library and python library paths in Makefile and Makefile.config as may be required
-    sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
-    sudo apt-get install — no-install-recommends libboost-all-dev
-    sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
-    sudo pip3 install protobuf
 
 ### Demo
 
